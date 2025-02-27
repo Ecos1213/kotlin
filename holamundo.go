@@ -6,34 +6,60 @@ import (
 	"rsc.io/quote"
 )
 
-var estaFuera, estaDentro = true, false // se puede inicializar variables incluso afuerda de las funciones
+// Las constantes en go podemos declararlas de igual manera dentro de una funcio de go o fuera de ellas si la declaramos fuera de ellas, quedan declaradas como constantes de paquete osea que podemos incluso usarlos en otros archivos de go
+const pi float32 = 3.14 // recuerda que los constantes no se pueden modificar o dara un error
+// los constantes pueden ser de cualquier tipo de dato e incluso podemos declararlo de la siguiente forma
+const PI = 3.14 // y go interpretara que es un float32
+// Recuerda que las constantes son sensibles a minusculas y mayusculas osea que una variable en mayusculas no sera lo mismo que una variable en minusculas
+// las constantes no necesitan imprimirse o usarse, no nos dara un error a cambio las variables si
+
+// asi como var podemos declarar varias constantes
+const (
+	//las constantes puede tener valores desde numeros hasta octales o binarios
+	x = 100
+	y = 0b1010 //binario
+	z = 0o12   //octal
+	w = 0xFF   //hexadecimal
+)
+
+const ( // recuerda que las constantes se debe declarar cuando los valores no son cambiante si son cambientes declara mejor una variable, y lo otro es que si queremos colocar los dias de la semana y darle un numero de 1 a 7 dias de la semana podemos usar algo llamado iota que lo que hace es que iota comienza la primera variable en 0 (podemos sumarle un numero y comnenzara de ahi en adelante) y comenzara de ahi en adelante a asignarle un valor segun el iota o la suma del iota por ejemplo:
+	Lunes = iota + 1 // como iota vale 0 al sumarle 1 empezara a asignarle un valor desde 1, por ende domiengo sera 7
+	Martes
+	Miercoles
+	Jueves
+	Viernes
+	Sabado
+	Domingo
+)
+
+var estaFuera, estaDentro = true, false
 
 func main() {
 	fmt.Println("Hola Mundo")
 	fmt.Println(quote.Hello())
+
 	//Declaracion de variables
-	var firstName string      // almacena cadena de caracteres, usamos la palabra reservada var para declarar una variable, las variables tienen que estar declaradas si no go no nos compilara incluso nos dara un error, ademas de esta forma se tiene que colocar el tipo de dato
-	var edad, apellido string // en golang se puede hacer asignacion multiple como python, pero solo funciona si las variables van hacer del mismo tipo
+	var firstName string
+	var edad, apellido string
 	var age int
 
-	var ( // asi tambien podemos declarar varias variables de diferente tipo, se puede asignar valores incluso dentro y despues pero recuerda que si no se asigna un valor dara un error
-		dia, año string = "1", "2020" // incluso podemos declarar varias variables en una misma linea pero tiene que ser del mismo tipo
+	var (
+		dia, año string = "1", "2020"
 		mes      int    = 1
-		esMayor         = true // tambien lo que podemos hacer es declarar la variable y a la vez asignar un valor sin su tipo de dato para que golang lo interprete pero esto solo lo podemos hacer si asignamos un valor si no nos dara un error
+		esMayor         = true
 	)
 
-	var identidad, telefono, correo, diaInicial = "123456", "3169035844", "diasflac1213@gmail.com", 22 // tambien podemos simplifcar mas la inicializacion y declaracion de variables como python
+	var identidad, telefono, correo, diaInicial = "123456", "3169035844", "diasflac1213@gmail.com", 22
 
 	firstName = "Alex"
 	apellido = "Rodel"
 	edad = "27"
 	age = 27
-	// en golang si no usamos una variable nos dara un error
-	fmt.Println(identidad, estaFuera, estaDentro, telefono, correo, diaInicial, firstName, apellido, age, edad, dia, año, mes, esMayor) // asi podemos imprimir varias variables y es como python que deja un espacio
 
-	// otra manera de inicializar las variables es de esta forma
-	esPaco, cedula, celular := false, "1143829274", 11 //esta es la forma mas comun de declarar pero con la palabra var puedes declararla fuera de las funciones, mientras que el simbolo := que hace referencia a golang solo puede declarar variables de esta forma dentro de funciones
+	fmt.Println(identidad, estaFuera, estaDentro, telefono, correo, diaInicial, firstName, apellido, age, edad, dia, año, mes, esMayor)
+
+	esPaco, cedula, celular := false, "1143829274", 11
 	celular = 3168035844
 	fmt.Println(esPaco, cedula, celular)
-
+	fmt.Println(x, y, z, Domingo)
 }
