@@ -18,10 +18,15 @@ fun main() {
 
     //Enteros
     println("Enteros: ")
+    // el rango de byte es de 127 a -128
     val trabajo: Byte = 3 // Byte se usa para numeros pequeños
     print("Trabajos: ")
     println(trabajo)
+    // con tipo de dato y MAX_VALUE nos dice el rango que tiene el tipo de dato y podemos darle ctrl y click para que intelijil nos envie a el valor de max_value y vemos que el maximo de byte es de 127
+    val max = Byte.MAX_VALUE // y con MIN_VALUE nos da el rango mas pequeño del tipo dato y el de byte es -128
+    // val max = Short.MAX_VALUE
 
+    // el valor maximo de shor es 32767 y el menor es -32768
     val diastrabajados: Short = 500 // Short se usa para numeros un pocos mas largos que Byte
     print("Dias trabajados: ")
     println(diastrabajados)
