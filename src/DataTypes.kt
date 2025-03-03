@@ -85,4 +85,29 @@ fun main() {
                 con sangria!
     """ // de esta forma como en python podemos crear un string con multilineas
     println(lineasmultiples) // Multilines string permite cadenas de texto con formato o estilos mas completos
+    /*
+    * esta es una de las caracteristicas mas importante de kotlin que son los nullable
+    * su antecesor java tiene problemas con ello y no en la compilacion, en un programa en su ejecucion puede aparecer
+    * una variable nullable ( osea quede vacia) y sucede que da un error critico y esto genera problemas por eso es una de las mejores
+    * caracteristicas que tiene kotlin y el problema es que los nullables puede ser un texto o un numero o culquier tipo de dato
+    * */
+
+    print("Nulos en kotlin: ")
+    // siempre que algo puede ser nulo debe ser marcado con signo ?
+    var ganancia: Int? = null // para que kotlin acepte tipo de datos nulos donde definimos el tipo de dato tenemos que darle un signo de pregunta al final del tipo de dato y entendera que esto puede ser nulo, esto lo hacemos como ejemplo
+    println("Salario: $ganancia") // aca no sucedera algun error solo mostrara null
+    var nombredeusuario: String? = null
+    //println("Longitud de nombre de usuario ${nombredeusuario.length}") // Esto dara error porque al ser null no pude sacar la longitud de caracteres o de array en estos casos tenemos que verificar si es null o no
+    // el simbolo de ? al lado de la variable signficia que l oque esta a la derecha no se ejecutara si es null
+    println("Longitud de nombre de usuario ? ${nombredeusuario?.length}") // Para que no suceda el error podemos decirle que esa variable puede ser null al final de la variable podemos colocarle un signo de pregunta
+
+    // una forma de evitar el caso de error con !! es simplemente asignandole una variable que este definido con un string
+    var apellido: String = null!!
+    var nombreRandom: String? = "CursosANT"
+    // estamos asegurandole a kotlin que la variable no sera null, esto quiere decir que esta bajo nuestra responsabilidad
+    apellido = nombreRandom!! // aca le estamos diciendo igual que esto no va a ser null y si llega a ser null muestre un mensaje de error
+    println("Longitud de nombre de usuario con !! ${apellido.length}") // aca parara el programa por que dara un error debido al simbolo !!
+
+    var apellidousuario: String = null!! // aca le estamos diciendo que si o si esto no va a ser null y si es null que ejecute un error y pare el programa eso significa los dos simbolso de !!
+    println("Longitud de nombre de usuario con !! ${apellidousuario.length}") // aca parara el programa por que dara un error debido al simbolo !!
 }
