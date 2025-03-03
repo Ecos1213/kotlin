@@ -64,6 +64,25 @@ fun main() {
     val casosespecialescadenas: String = "\tA\'N\"T\\ \$ $" // en casos especiales podemos usar barra invertida y t colocamos tabulaciones y podemos colocar ciertos simbolos con barrita invertida
     println(casosespecialescadenas)
 
+    println("Entrada de datos(readline): ")
+    val nombre = readln() // la funcion readln sirve para tomar la entrada de datos por consola del usuario, esto puede llevar como argumento un string para mostrar en consola, entrada de datos de datos
+    println(nombre)
+    println("Concatenacion: ")
+    println("Hola " + nombre) // en kotlin podemos concatenar los textos con +, juntar 2 o mas cadenas de caracteres
 
+    println("String Templates: ") // para concactenar strings de forma optimizada
+    // string tamplates es la manera mas moderna para concatenar cadenas de texto pero totalmente optimizado
+    println("Hola $nombre!") // con signo de pesos y la variable podemos concatenar en el texto a esto se le llama string templates
+    val longitud = nombre.length // toma la cantidad de caracteres de una cadena, esto lo veremos mas adelante a detalle
+    println("longitud: $longitud") // requiere el simbolo de $ antes de llamar a la variable
 
+    // encapsular en caso de acceder a propiedades o funciones con {}
+    println("Longitud: ${nombre.length}") // como es un proceso que saca la cantidad de caracteres tenemos que cubrirlo con llaves {} despues del signo $
+
+    println("Multiline String: ") // Raw String
+    val lineasmultiples: String = """
+        Hola, estoy "escribiendo"
+                con sangria!
+    """ // de esta forma como en python podemos crear un string con multilineas
+    println(lineasmultiples) // Multilines string permite cadenas de texto con formato o estilos mas completos
 }
