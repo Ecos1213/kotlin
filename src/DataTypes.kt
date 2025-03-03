@@ -45,4 +45,25 @@ fun main() {
     println(estatura)
 
     val estaturareal: Double = 1.733_333_333_333// el double se usa para puntos decimal muchos mas grandes, sirve para tener mas precision y ademas como el float el dato tiene que tener una d para decirle que ese dato es double
+    print("Estatura real: ")
+    println(estaturareal)
+
+    println("Textos: ")
+    // El tipo char solo permite colocar un caracter y se usa comillas simple para definir su valor, pero hay casos especiales como es \n
+    val inicial1: Char = 'A'
+    val inicial2: Char = 'N'
+    val inicial3: Char = 'T'
+    val casosespeciales: Char = '\n'
+    print(inicial1)
+    print(inicial2)
+    print(inicial3)
+    print(casosespeciales) // salto de linea
+
+    val iniciales: String = "ANT" // los string se manejan en comillas dobles
+    println(iniciales) // los strings en programacion como se ve en python y otros lenguajes los string es una cadena de caracteres
+    val casosespecialescadenas: String = "\tA\'N\"T\\ \$ $" // en casos especiales podemos usar barra invertida y t colocamos tabulaciones y podemos colocar ciertos simbolos con barrita invertida
+    println(casosespecialescadenas)
+
+
+
 }
