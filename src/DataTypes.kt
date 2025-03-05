@@ -102,12 +102,20 @@ fun main() {
     println("Longitud de nombre de usuario ? ${nombredeusuario?.length}") // Para que no suceda el error podemos decirle que esa variable puede ser null al final de la variable podemos colocarle un signo de pregunta
 
     // una forma de evitar el caso de error con !! es simplemente asignandole una variable que este definido con un string
-    var apellido: String = null!!
+    var apellido: String? = "Alain"
     var nombreRandom: String? = "CursosANT"
     // estamos asegurandole a kotlin que la variable no sera null, esto quiere decir que esta bajo nuestra responsabilidad
     apellido = nombreRandom!! // aca le estamos diciendo igual que esto no va a ser null y si llega a ser null muestre un mensaje de error
     println("Longitud de nombre de usuario con !! ${apellido.length}") // aca parara el programa por que dara un error debido al simbolo !!
 
-    var apellidousuario: String = null!! // aca le estamos diciendo que si o si esto no va a ser null y si es null que ejecute un error y pare el programa eso significa los dos simbolso de !!
+    /*var apellidousuario: String = null!! // aca le estamos diciendo que si o si esto no va a ser null y si es null que ejecute un error y pare el programa eso significa los dos simbolso de !!
     println("Longitud de nombre de usuario con !! ${apellidousuario.length}") // aca parara el programa por que dara un error debido al simbolo !!
+    */
+    println("Operador Elvis: ") // ?: este simbolo es el operador elvis, Si lo que esta a la izquierda del ?: no es null, entonces ocupalo, delo contrario usa el valor despues de ?:
+    var lenguaje: String? = "Kotlin"
+    lenguaje = null
+    val lenguajeprodefault: String = "java"
+    println("Yo programo en ${lenguaje ?: lenguajeprodefault}") // el operador ?: tambien llamado operador elvis trata de una especie de condicional que dice si el operador de la izquierda es null entonces que tome lo de la derecha
+
+
 }
