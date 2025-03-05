@@ -17,7 +17,34 @@ fun main() { // recuerda cualquier numero puede ser convertido en otro tipo de n
     val numerotexto: String = "6.4"
     println(numerotexto.toDouble()) // en este caso el texto podra convertirse de un texto a numero debido a que el string tiene un numero pero si colocamos un texto o algo que no sea numero o decimal este nos dara un error
 
-    val numerotexto2 = "6.4tar"
+    /*val numerotexto2 = "6.4tar"
     println(numerotexto2.toDouble()) // esto dara error debido a que el texto tiene un contenido no solo de numeros si no tambien texto, lo cual el casteo a cualquier tipo de dato numerico sea decimal o numero el texto tiene que ser solo numeros o decimales
+    */
+
+    println("Operadores matematicos.\nInserte un numero: ")
+    val x = readln()
+    println("Inserte otro numero")
+    val y = readln()
+
+    var numerox = x.toInt()
+    val numeroy = y.toInt()
+
+    println("x + y = ${numerox + numeroy}") // suma
+    println("x - y = ${numerox - numeroy}") // resta
+    println("x * y = ${numerox * numeroy}") // multiplicacion
+    println("x / y = ${numerox / numeroy}") // division
+    println("x % y = ${numerox % numeroy}") // modulo
+
+    println("Operadores con tareas aumentadas.")
+    numerox += numeroy // lo mismo que: numerox = numerox + numeroy
+    println("x + y = $numerox")
+    numerox *= numeroy // y sirve para cualquier operador
+    println("x * y = $numerox")
+    numerox /= numeroy
+    println("x / y = $numerox")
+    numerox -= numeroy
+    println("x - y = $numerox")
+    numerox %= numeroy
+    println("x % y = $numerox")
 
 }
