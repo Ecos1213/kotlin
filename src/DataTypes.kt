@@ -112,6 +112,4 @@ fun main() {
     var apellidousuario: String = null!! // aca le estamos diciendo que si o si esto no va a ser null y si es null que ejecute un error y pare el programa eso significa los dos simbolso de !!
     println("Longitud de nombre de usuario con !! ${apellidousuario.length}") // aca parara el programa por que dara un error debido al simbolo !!
 
-
-
 }
