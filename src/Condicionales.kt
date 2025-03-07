@@ -22,4 +22,18 @@ fun main() {
             println("No es igual")
         }
     }
+
+    println("Operadores logicos")
+    // not !, negacion una operacion logica, tambien se puede leer como diferente de
+    if (1 != 2) println("1 es diferente de 2")
+
+    // or || = uno u otro, con que una accion, sea valida entonces procedemos
+    // true o true = true, true o false = true, false o true = true, false o false = false
+    if (1 == 1 || 1 == 2) println("Al menos una condicion fue valida")
+
+    //and && = si y solo si los 2 son positivo entonces procede..
+    // true y true = true, true y false = false, false y true = false, false y false = false
+    if (1 == 1 && 1 != 2) println("las dos condiciones fueron validas")
+
+
 }
