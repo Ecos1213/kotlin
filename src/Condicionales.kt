@@ -58,4 +58,22 @@ fun main() {
         println("A es igual que B")
     }
 
+    println("Sentencia When")
+    println("Para consultar tu saldo, ingresa tu tarjeta: ")
+    // la expresion when sirve para ocasiones de seleccion multiple
+    val tarjeta = readln()
+    // el when es muy parecido al switch case e incluso si no encuentra el resultado no mostrara nada a menos que tengamos un default que es en este caso el else
+    when(tarjeta) { // cuando(when) lo evaluado(tarjeta) coincida con alguna opcion, ejecuta el codigo correspondiente -> ....
+        "001" -> println("$10.0 USD")
+        "011" -> println("$11.0 USD")
+        "201" -> println("$210.0 USD")
+        "300", "301" -> println("$130.0 usd") // si un caso muestra lo mismo para no repetir otra linea de codigo con el mismo resultado lo que podemos hacer es colocar varias comparaciones en una misma linea separados con coma como el ejemplo
+        "320" -> { // e incluso podemos colocar un bloque de codigo, para que ejecute to_do lo que hay dentro del bloque de codigo
+            println("$21.0 usd")
+            println("$10.0 usd")
+        }
+        // si no coincide con nada, entonces ejecuta el caso else(default)
+        else -> println("Tarjeta no encontrada") // el else en when es el default de switch case
+    }
+
 }
