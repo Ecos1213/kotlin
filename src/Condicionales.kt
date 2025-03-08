@@ -35,5 +35,27 @@ fun main() {
     // true y true = true, true y false = false, false y true = false, false y false = false
     if (1 == 1 && 1 != 2) println("las dos condiciones fueron validas")
 
+    println("Operadores de comparacion y sentencia if-else")
+    val a = 16
+    val b = 10
+    //menor que b
+    if (a < b) println("A es menor que B")
+    // mayor que b
+    if (a > b) println("A es mayor que B")
+    val c = 15
+    // mayor igual a c
+    if (a >= c) println("A es mayor o igual que C")
+
+    //menor igual a c
+    if (a <= c) println("A es menor o igual que C") // tambien con else podemos escribir en una sola linea tanto el if como el else
+    else println("A es mayor que c")
+
+    if (a < b) { // si esto se cumple
+        println("A es menor que B")
+    } else if (a > b) { //o si esto se cumple. asi se crea un else if en kotlin
+        println("A es mayor que B")
+    } else { // si no entonces
+        println("A es igual que B")
+    }
 
 }
