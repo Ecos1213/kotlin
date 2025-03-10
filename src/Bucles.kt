@@ -37,4 +37,21 @@ fun main() {
     }
     println("Longitud: $longitud")
     println("Saldo: $saldo")
+
+    println("While y Do While")
+    var indice = 0
+    // evalua primero y hace despues, while evalua primero y si se sigue cumpliendo entonces repite el bloque de codigo
+    while (indice < nombre.length) {
+        println("Indice: $indice")
+        println("Letra en el indice: ${nombre.get(indice)}")
+        indice++ // incrementamos, para que en algun punto, la condicion sea false y termine el bucle while
+    }
+
+    // ejecuta primero y despues evalua
+    do { // ejecuta una vez el bloque de codigo y despues, verifica la condicion
+        indice--
+        println("indice: $indice")
+        println("Letra en el indice: ${nombre.get(indice)}")
+    } while (indice > 0)
+
 }
