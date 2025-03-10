@@ -25,4 +25,16 @@ fun main() {
     for (bocal in bocales) { // lo unico malo es que aca no hay indice
         println(bocal)
     }
+
+    println("Operdores de incremento")
+    val nombre: String = "Rosa"
+    var longitud: Int = 0
+    var saldo: Int = 100
+    for (letra in nombre) {
+        println(letra)
+        longitud++//longitud += 1 //longitud = longitud + 1 // esta es la manera de incrementar y podemos optimizarlo
+        saldo--
+    }
+    println("Longitud: $longitud")
+    println("Saldo: $saldo")
 }
